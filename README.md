@@ -4,6 +4,8 @@
 
 > * 支持内容面板的收缩
 > * 支持时间面板和内容边版的动态高度增长
+> * 支持透明度转换
+
 
 使用方法
 
@@ -16,30 +18,33 @@ $(function(){
 
 基本变量
 ```
-* name_timeMain              : '#t_container',            //value: 主面板 ; elements : any HTML
-* name_timeDates             : '#t_date',             //value: 时间面板; elements : any HTML
-* name_timeContentsContainer : '#t_contentContainer', //value: 内容包含面板(单独用的时候) ; elements: any * HTML
-* name_timeContents          : '.t_content',          //value: 内容面板 ; elements : any HTML
-* name_timeDateClick         : 'a',                   //value: 时间点击 ; elements : any HTML
-* speed_date                 : 500,                   //value: 时间面板移动速度    elements: int
-* speed_content              : 500,                   //value: 内容包含面板速度    elements: int
-* boolean_dateMove           : false,                 //value: 时间面板是否移动    elements: bool
-* boolean_contentMove        : false,                 //value: 内容包含面板是否移动 elements: bool
-* boolean_traction           : false                  //value: 内容面板是否拉伸     elements: bool
+    name_timeMain              : '#t_container',            //value: 主面板 ; elements : any HTML
+    name_timeDates             : '#t_date',                 //value: 时间面板; elements : any HTML
+    name_timeContentsContainer : '#t_contentContainer',     //value: 内容包含面板(单独用的时候) ; elements: any HTML
+    name_timeContents          : '.t_content',              //value: 内容面板 ; elements : any HTML
+    name_timeDateClick         : 'a',                       //value: 时间点击 ; elements : any HTML
+    speed_date                 : 500,                       //value: 时间面板移动速度     elements: int
+    speed_content              : 500,                       //value: 内容包含面板速度     elements: int
+    speed_opacity              : 200,                       //value: 透明度变化速度       elements: int
+    attr_opacity               : '0.2',                     //value: 默认透明度          elements: string
+    boolean_dateMove           : false,                     //value: 时间面板是否移动     elements: bool
+    boolean_contentMove        : false,                     //value: 内容包含面板是否移动 elements: bool
+    boolean_transition         : false,                     //value: 内容面板是否拉伸     elements: bool
+    boolean_opacity            : false                      //value: 透明度是否变化      elements: bool
 ```
 
 代码示范
 
 ```
-//script这样写
+//script is just like this
 $(function(){
     $().timebase({
-        boolean_dateMove : true,
-         boolean_contentMove : true
+        boolean_dateMove    : true, //timebase move
+        boolean_contentMove : true  //content  move
     });
 });
 
-//HTML
+//HTML is just like this
 <div id='t_container' >
         <div id='t_date' style="float:left">
           <div><a href="#">a</a></div>
