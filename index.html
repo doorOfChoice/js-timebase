@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>timebase</title>
+    <script type="text/javascript" src='jquery-3.1.1.min.js'></script>
+    <script type="text/javascript" src='js-timebase.js'></script>
+    <script type="text/javascript">
+      $(function(){
+        $().timebase({
+          name_timeDateClick  : 'li.click',
+          speed_opacity       : 200 ,
+          boolean_dateMove    : true,
+          boolean_keyboard    : true,
+          boolean_transition  : true,
+          boolean_opacity     : true,
+          boolean_scroll      : true
+        });
+      });
+    </script>
+    <link rel="stylesheet" href="css/timebase.css" media="screen" title="no title">
+  </head>
+  <body>
+
+    <div id="container">
+      <div id="t_container">
+        <ul id="t_date">
+          <li class='click'></li>
+          <li class='click'></li>
+          <li class='click'></li>
+          <li class='click'></li>
+          <li class='click'></li>
+          <li class='click'></li>
+          <li class='click'></li>
+          <li class='click'></li>
+        </ul>
+        <div id="t_contentContainer">
+          <div class="t_content">text1</div>
+          <div class="t_content">text2</div>
+          <div class="t_content">text3</div>
+          <div class="t_content">
+              <h1>New Start</h1>
+              <p class='detailTime'>
+                2012/08/01
+              </p>
+              <pre>
+              </pre>
+          </div>
+          <div class="t_content">text3</div>
+          <div class="t_content">text3</div>
+          <div class="t_content">text3</div>
+          <div class="t_content">text3</div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
