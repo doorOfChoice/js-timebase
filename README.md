@@ -10,7 +10,7 @@
 
 使用方法
 
-```
+```javascript
 $(function(){
     $().timebase(options);
 });
@@ -18,7 +18,7 @@ $(function(){
 
 
 基本变量
-```
+```javascript
     name_timeMain              : '#t_container',            //value: 主面板 ; elements : any HTML
     name_timeDates             : '#t_date',                 //value: 时间面板; elements : any HTML
     name_timeContentsContainer : '#t_contentContainer',     //value: 内容包含面板(单独用的时候) ; elements: any HTML
@@ -39,7 +39,7 @@ $(function(){
 
 代码示范
 
-```
+```javascript html
 //script is just like this
 $(function(){
     $().timebase({
