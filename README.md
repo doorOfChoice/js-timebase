@@ -39,7 +39,7 @@ $(function(){
 
 代码示范
 
-```javascript html
+```javascript
 //script is just like this
 $(function(){
     $().timebase({
